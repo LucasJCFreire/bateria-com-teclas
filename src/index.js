@@ -39,3 +39,11 @@ function playComposition(songArray) {
         wait += 250;
     }
 }
+
+// Add click listeners to keys
+document.querySelectorAll('div.key').forEach(keyElement => {
+    keyElement.addEventListener('click', () => {
+        const sound = keyElement.getAttribute('data-teclas');
+        playSound(sound);
+    });
+});

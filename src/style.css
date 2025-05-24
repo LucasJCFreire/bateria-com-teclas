@@ -29,17 +29,31 @@ h1 {
     width: 80px;
     height: 80px;
     border: 2px solid #FFF;
-    color: #FFF;
+    color: #FFF; /* Default white text color */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
     font-weight: bold;
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Smooth transition for ativado state */
 }
 
+/* Individual key background colors */
+.key[data-teclas="keyq"] { background-color: #FF5733; } /* OrangeRed */
+.key[data-teclas="keyw"] { background-color: #33FF57; } /* LimeGreen */
+.key[data-teclas="keye"] { background-color: #3357FF; } /* RoyalBlue */
+.key[data-teclas="keya"] { background-color: #FF33A1; } /* HotPink */
+.key[data-teclas="keys"] { background-color: #F1C40F; } /* SunFlower Yellow */
+.key[data-teclas="keyd"] { background-color: #9B59B6; } /* Amethyst Purple */
+.key[data-teclas="keyz"] { background-color: #1ABC9C; } /* Turquoise */
+.key[data-teclas="keyx"] { background-color: #E74C3C; } /* Alizarin Crimson */
+.key[data-teclas="keyc"] { background-color: #3498DB; } /* Peter River Blue */
+
 .key.ativado {
-    border: 2px solid #FF0;
-    color: #FF0;
+    border: 3px solid #FFFFFF; /* Slightly thicker white border for high contrast */
+    transform: scale(1.1);    /* Slight zoom to indicate activation */
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.75); /* White glow effect */
+    color: #FFFFFF; /* Ensure text remains white and highly readable */
 }
 
 .compositor {
